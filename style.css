@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 16px;
+}
+
+.hero i {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  background-image: url(./images/bg-desktop-light.jpg);
+  min-height: 255px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 480px;
+  position: absolute;
+  top: 3.8rem;
+  /* border: solid 2px red; */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.25em;
+}
+
+.todos {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 25px 0px;
+  /* padding: 16px 40px; */
+}
+
+/* Input form styling */
+form {
+  max-width: 100%;
+  margin-bottom: 1.3em;
+}
+
+form input {
+  color: whitesmoke;
+  background-color: #fff;
+  border: none;
+  color: #444;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  padding: 20px 60px;
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form input::placeholder {
+  color: #ccc;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline-color: #b066ef;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 60px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  font-size: 1rem;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  /* font-size: 22px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  height: 25px;
+  width: 25px;
+  /* background-color: #eee; */
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background: linear-gradient(310deg, #b066ef, #658eff);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.list-state {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.items-left {
+  margin-left: 23px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.clear-completed {
+  margin-right: 23px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.list-state button {
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  color: #aaa;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-state button:hover {
+  color: #bbb;
+}
+
+button.active {
+  color: #658eff;
+  font-weight: bold;
+}
+.buttons {
+  margin: 0 auto;
+}
+
+.mobile {
+  display: none;
+}
+
+.drag-n-drop {
+  text-align: center;
+  color: #aaa;
+  margin-top: 2.5rem;
+}
+
+/* Smaller Screen Styling */
+@media screen and (max-width: 548px) {
+  body {
+    font-size: 0.9rem;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    background-size: cover;
+    min-height: 226px;
+  }
+
+  .row {
+    width: 85%;
+  }
+
+  form input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .list-state {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .list-state small {
+    font-size: 0.8rem;
+  }
+  .list-state .buttons {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 1.3em;
+  }
+
+  .mobile button {
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    color: #aaa;
+    font-weight: 900;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .mobile button:hover {
+    color: #bbb;
+  }
+
+  button.active {
+    color: #658eff;
+    font-weight: bold;
+  }
+
+  .container {
+    font-size: 0.8rem;
+    padding-top: 22px;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-do app</title>
+    <script
+      src="https://kit.fontawesome.com/9e4bc4f195.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <header class="hero col">
+          <h1>Todo</h1>
+          <span><i class="fas fa-moon"></i></span>
+        </header>
+
+        <main class="main col">
+          <form>
+            <input type="text" placeholder="Enter your todo..." />
+          </form>
+          <div class="todos">
+            <label class="container"
+              >Master react javascript
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Take a walk with my dog
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Interview with Goldman Sachs
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Call family and friends
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Go to the gymn and grocery story
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Master react javascript
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <div class="list-state">
+              <small class="items-left">5 items left</small>
+              <div class="buttons desktop">
+                <button class="active">All</button>
+                <button>Active</button>
+                <button>Completed</button>
+              </div>
+              <small class="clear-completed">Clear Completed</small>
+            </div>
+          </div>
+        </main>
+        <div class="buttons mobile">
+          <button class="active">All</button>
+          <button>Active</button>
+          <button>Completed</button>
+        </div>
+
+        <div class="drag-n-drop">
+          <small>Drag and drop to reorder list</small>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
